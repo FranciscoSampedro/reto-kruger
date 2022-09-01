@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://jelani.db.elephantsql.com:5432/fhtmpjoh
+    username: fhtmpjoh
+    password: BEy6aOHxm2w64nS7-A2KTae1IRj8BpE5
+    dbcp2:
+      max-wait-millis: 30000
+      validation-query: SELECT 1
+      validation-query-timeout: 30
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        id:
+          new_generator_mappings: true
+springdoc:
+  pathsToMatch: /api/**
